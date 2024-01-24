@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbox"
+    tools:context=".Activity.AddTaskinDb">
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        app:cardElevation="100dp"
+        android:id="@+id/datepickercad"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="12dp"
+        android:visibility="gone"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="#C898F2"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="100dp"
+                android:elevation="8dp">
+                <ImageButton
+                    android:id="@+id/setdatebutn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right"
+                    android:scaleType="fitCenter"
+                    android:padding="10dp"
+                    android:backgroundTint="#00FFFFFF"
+                    />
+            </androidx.cardview.widget.CardView>
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:datePickerMode="spinner"
+                android:id="@+id/datepicker"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="12dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:backgroundTint="#8FFFFFFF"
+        android:elevation="8dp"
+        app:cardElevation="10dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_height="100dp">
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:id="@+id/secondcard"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="100dp"
+        app:cardCornerRadius="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="8dp"
+        app:cardElevation="10dp"
+        >
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Creat A List"
+              android:textStyle="bold"
+              android:textSize="25dp"
+              android:id="@+id/creatlisttext"
+              android:layout_centerHorizontal="true"
+              android:layout_alignParentTop="true"
+              android:layout_marginTop="40dp"
+              android:textAlignment="center"
+              android:textColor="#777777"
+
+              />
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/datetimecontainerlinearlayout"
+              android:layout_below="@+id/creatlisttext"
+              android:layout_marginTop="20dp"
+              android:layout_marginRight="10dp"
+              android:layout_marginLeft="10dp"
+              >
+              <ImageButton
+                  android:layout_width="55dp"
+                  android:layout_height="55dp"
+                  android:src="@drawable/calendericon"
+                  android:scaleType="fitCenter"
+                  android:gravity="center"
+                  android:backgroundTint="#00FFFFFF"
+android:id="@+id/calandericon"
+                  android:layout_gravity="center_horizontal"
+                  app:tint="#9A87B7" />
+              <TextView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="11-11-2016,Friday"
+                  android:textSize="25dp"
+android:id="@+id/date"
+                  android:layout_gravity="center_vertical"
+                  android:gravity="center"
+                  android:textStyle="italic"
+                  android:textColor="#777777"
+                  />
+          </LinearLayout>
+
+          <TimePicker
+              android:id="@+id/settime"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:layout_below="@id/datetimecontainerlinearlayout"
+              android:layout_marginTop="19dp"
+              android:amPmBackgroundColor="@color/black"
+              android:amPmTextColor="#000000"
+              android:backgroundTint="@color/white"
+              android:headerBackground="@color/white"
+              android:numbersBackgroundColor="#000000"
+              android:numbersInnerTextColor="@color/black"
+              android:numbersSelectorColor="#000000"
+              android:numbersTextColor="@color/black"
+              android:textAlignment="center"
+              android:timePickerMode="spinner" />
+
+          <RelativeLayout
+              android:id="@+id/labalerelative"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/settime"
+              android:layout_marginTop="35dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentStart="true"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginStart="40dp"
+                  android:layout_marginLeft="40dp"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginEnd="88dp"
+                  android:layout_marginBottom="10dp"
+                  android:layout_toStartOf="@+id/textView"
+                  android:text="Label"
+                  android:textColor="#777777"
+                  android:textSize="20dp"
+                  android:textStyle="italic" />
+
+              <TextView
+                  android:id="@+id/textView"
+                  android:layout_width="166dp"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginRight="6dp"
+                  android:layout_marginBottom="10dp"
+                  android:text="Select>"
+                  android:textColor="#777777"
+                  android:textSize="20dp"
+                  android:textStyle="italic" />
+          </RelativeLayout>
+
+          <EditText
+              android:id="@+id/description"
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:layout_below="@+id/labalerelative"
+              android:layout_marginTop="30dp"
+              android:gravity="center"
+              android:layout_centerHorizontal="true"
+              android:hint=" Description "
+              android:textColorHint="@color/black"
+              tools:ignore="SpeakableTextPresentCheck" />
+      </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/secondcard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"
+        android:backgroundTint="#C898F2"
+        android:elevation="20dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="20dp"
+        app:cardMaxElevation="80dp">
+
+        <ImageButton
+            android:id="@+id/taskaddindb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00000000"
+         android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/right"
+            app:tint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/Groceryshopping"
+    android:title="Grocery shopping"
+    />
+    <item
+        android:id="@+id/Laundry"
+        android:title="Laundry"
+        />
+    <item
+        android:id="@+id/Exercise"
+        android:title="Exercise"
+        />
+    <item
+        android:id="@+id/Reading"
+        android:title="Laundry"
+        />
+    <item
+        android:id="@+id/Projectdeadlines"
+        android:title="Project deadlines"
+        />
+    <item
+        android:id="@+id/Meetings"
+        android:title="Meetings"
+        />
+    <item
+        android:id="@+id/Homeworkassignments"
+        android:title="Homework assignments"
+        />
+    <item
+        android:id="@+id/Exampreparation"
+        android:title="Exam preparation"
+        />
+    <item
+        android:id="@+id/Doctorappointments"
+        android:title="Doctor appointments"
+        />
+    <item
+        android:id="@+id/Billpayments"
+        android:title="Bill payments"
+        />
+    <item
+        android:id="@+id/Budgeting"
+        android:title="Budgeting"
+        />
+    <item
+        android:id="@+id/Taxrelatedtask"
+        android:title="Tax-related task"
+        />
+    <item
+        android:id="@+id/Familyevents"
+        android:title="Family events"
+        />
+    <item
+        android:id="@+id/Anniversaries"
+        android:title="Anniversaries"
+        />
+    <item
+        android:id="@+id/Repairs"
+        android:title="Repairs"
+        />
+    <item
+        android:id="@+id/Eventplanning"
+        android:title="Event planning"
+        />
+</menu>

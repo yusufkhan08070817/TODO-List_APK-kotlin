@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       app:cardElevation="8dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/taskrecimage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_background" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/taskrecimage">
+
+                <TextView
+                    android:id="@+id/taskrectasktime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="08:30AM"
+                    android:textColor="#B4000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/taskrectitale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_toRightOf="@id/taskrectasktime"
+                    android:text="Running"
+                    android:textColor="#B4000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/taskrectasktask_tiaile_descriptation"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/taskrectasktime"
+
+                    android:layout_marginLeft="10dp"
+                    android:text="Running for an hour"
+                    android:textColor="#878787"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+          android:layout_gravity="right"
+           android:layout_height="match_parent">
+           <LinearLayout
+               android:layout_width="100dp"
+               android:layout_centerVertical="true"
+               android:layout_height="wrap_content"
+
+               android:orientation="vertical">
+
+               <ImageButton
+                   android:id="@+id/complete"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_gravity="center"
+                   android:backgroundTint="#CAB2FF"
+                   android:foregroundGravity="center"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/right"
+                   tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+               <ImageButton
+                   android:id="@+id/delete"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_gravity="center"
+                   android:backgroundTint="#CAB2FF"
+                   android:foregroundGravity="center"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/bin"
+                   tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+               <ImageButton
+                   android:id="@+id/notcomplete"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_gravity="center"
+                   android:backgroundTint="#CAB2FF"
+                   android:foregroundGravity="center"
+                   android:scaleType="fitCenter"
+                   android:src="@drawable/close"
+                   tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+           </LinearLayout>
+       </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
