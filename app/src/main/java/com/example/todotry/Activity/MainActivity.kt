@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -14,13 +13,11 @@ import com.example.todotry.Adopter.CalanderAdopter
 import com.example.todotry.Adopter.TaskAdopter
 import com.example.todotry.Dataclass.DateAndDay
 import com.example.todotry.OBJ.DataBaseOBJ
-import com.example.todotry.R
 import com.example.todotry.Room.TODOTaskTable
 import com.example.todotry.databinding.ActivityMainBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
 class MainActivity : AppCompatActivity(), CalanderAdopter.clenderclick, TaskAdopter.taskbutton {
     private lateinit var binding: ActivityMainBinding
@@ -86,6 +83,7 @@ class MainActivity : AppCompatActivity(), CalanderAdopter.clenderclick, TaskAdop
 
 
     override fun taskcomplete(position: Int, data: TODOTaskTable) {
+
 
     }
 
