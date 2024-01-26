@@ -43,7 +43,7 @@ class AddTaskinDb : AppCompatActivity() {
         }
         binding.datepicker.setOnDateChangedListener { view, year, monthOfYear, dayOfMonth ->
             DateMonth.date = dayOfMonth
-            DateMonth.month = monthOfYear
+            DateMonth.month = monthOfYear+1
             DateMonth.year = year
 
         }

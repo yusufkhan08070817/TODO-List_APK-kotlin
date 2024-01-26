@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity(), CalanderAdopter.clenderclick, TaskAdop
             try{
                 DataBaseOBJ.database.fetseconddao().insert(Second(data.id,data.title,data.descripatation,data.icon,data.time,data.Date))
                 Log.e("data","${DataBaseOBJ.database.fetseconddao().getdata()}")
-                deletetask(data)
+               deletetask(data)
             }catch (e:Exception)
             {
                Log.e("dbeeror","$e")
@@ -121,8 +121,12 @@ t("good job")
 
     }
 
-    override fun onclienderclick(position: Int, date: LocalDate, day: String, view: View) {
-        Toast.makeText(this, "$date $day", Toast.LENGTH_SHORT).show()
+    override fun onclienderclick(position: Int, date: String, day: String, view: View) {
+        Toast.makeText(this, "$date ", Toast.LENGTH_SHORT).show()
+DataBaseOBJ.database.gettoDAO().getRecordsByDate(date).observe(this, Observer {
+    binding.dbshow.adapter=TaskAdopter(it,this)//update teask recycler
+    t(it)
+})
 
     }
 
@@ -135,4 +139,6 @@ fun t(e:Any)
             DataBaseOBJ.database.gettoDAO().deletetiask(data)
         }
     }
+
+
 }
