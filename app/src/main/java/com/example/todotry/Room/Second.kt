@@ -1,0 +1,8 @@
+package com.example.todotry.Room
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+@Entity(tableName = "name")
+data class Second (
+    @PrimaryKey(autoGenerate = true)
+    var id :Long=0,val title:String,val descripatation:String,val icon:Int ,val time:String,val Date:String)
