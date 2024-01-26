@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -13,7 +14,9 @@ import com.example.todotry.Adopter.CalanderAdopter
 import com.example.todotry.Adopter.TaskAdopter
 import com.example.todotry.Dataclass.DateAndDay
 import com.example.todotry.OBJ.DataBaseOBJ
+import com.example.todotry.Room.Second
 import com.example.todotry.Room.TODOTaskTable
+import com.example.todotry.Room.notcompletetable
 import com.example.todotry.databinding.ActivityMainBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -77,23 +80,44 @@ class MainActivity : AppCompatActivity(), CalanderAdopter.clenderclick, TaskAdop
             currentDate = currentDate.plusDays(1)
         }
 
+
         return dateList
     }
 
 
 
     override fun taskcomplete(position: Int, data: TODOTaskTable) {
+        GlobalScope.launch {
+            try{
+                DataBaseOBJ.database.fetseconddao().insert(Second(data.id,data.title,data.descripatation,data.icon,data.time,data.Date))
+                Log.e("data","${DataBaseOBJ.database.fetseconddao().getdata()}")
+                deletetask(data)
+            }catch (e:Exception)
+            {
+               Log.e("dbeeror","$e")
+            }
 
-
+        }
+t("good job")
     }
 
     override fun taskdelete(position: Int, data: TODOTaskTable) {
-    GlobalScope.launch {
-        DataBaseOBJ.database.gettoDAO().deletetiask(data)
-    }
+   deletetask(data)
+        t("task deleted")
     }
 
     override fun tasknotcomplete(position: Int, data: TODOTaskTable) {
+        GlobalScope.launch {
+            try{
+                DataBaseOBJ.database.notcompletedao().insertiask(notcompletetable(data.id,data.title,data.descripatation,data.icon,data.time,data.Date))
+                Log.e("data not completed","${DataBaseOBJ.database.fetseconddao().getdata()}")
+                deletetask(data)
+            }catch (e:Exception)
+            {
+                Log.e("dbeeror","$e")
+            }
+        }
+        t(":( ok try next time")
 
     }
 
@@ -102,5 +126,13 @@ class MainActivity : AppCompatActivity(), CalanderAdopter.clenderclick, TaskAdop
 
     }
 
-
+fun t(e:Any)
+{
+    Toast.makeText(this, "$e", Toast.LENGTH_SHORT).show()
+}
+    fun deletetask(data:TODOTaskTable){
+        GlobalScope.launch {
+            DataBaseOBJ.database.gettoDAO().deletetiask(data)
+        }
+    }
 }

@@ -8,6 +8,7 @@ import com.example.todotry.Room.TODOdatabase
 object DataBaseOBJ {
   lateinit var database:TODOdatabase
     fun initialize(application: Context){
-        database= Room.databaseBuilder(application,TODOdatabase::class.java,"TOdatabase").build()
+        database= Room.databaseBuilder(application,TODOdatabase::class.java,"TOdatabase").allowMainThreadQueries()
+            .build()
     }
 }
